@@ -1,0 +1,10 @@
+D:\Programming\Programming Archive\VSProjects\BrioDevExercise\forecast.io\bin\Debug\Forecast.io.45.dll
+D:\Programming\Programming Archive\VSProjects\BrioDevExercise\forecast.io\bin\Debug\Forecast.io.45.pdb
+D:\Programming\Programming Archive\VSProjects\BrioDevExercise\forecast.io\bin\Debug\Newtonsoft.Json.dll
+D:\Programming\Programming Archive\VSProjects\BrioDevExercise\forecast.io\bin\Debug\Newtonsoft.Json.pdb
+D:\Programming\Programming Archive\VSProjects\BrioDevExercise\forecast.io\bin\Debug\Newtonsoft.Json.xml
+D:\Programming\Programming Archive\VSProjects\BrioDevExercise\forecast.io\obj\Debug\Forecast.io.csprojResolveAssemblyReference.cache
+D:\Programming\Programming Archive\VSProjects\BrioDevExercise\forecast.io\obj\Debug\Forecast.io.csproj.CoreCompileInputs.cache
+D:\Programming\Programming Archive\VSProjects\BrioDevExercise\forecast.io\obj\Debug\Forecast.io.csproj.CopyComplete
+D:\Programming\Programming Archive\VSProjects\BrioDevExercise\forecast.io\obj\Debug\Forecast.io.45.dll
+D:\Programming\Programming Archive\VSProjects\BrioDevExercise\forecast.io\obj\Debug\Forecast.io.45.pdb
