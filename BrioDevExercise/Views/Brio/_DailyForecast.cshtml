@@ -1,0 +1,186 @@
+﻿@model IEnumerable<ForecastIO.DailyForecast>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.summary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.icon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sunriseTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sunsetTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.moonPhase)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipAccumulation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipIntensity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipIntensityError)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipIntensityMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipIntensityMaxTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipProbability)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.temperatureMin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.temperatureMinTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.temperatureMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.temperatureMaxTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apparentTemperatureMin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apparentTemperatureMinTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apparentTemperatureMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apparentTemperatureMaxTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dewPoint)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.windSpeed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.windBearing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cloudCover)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.humidity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pressure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.visibility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ozone)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.summary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.icon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sunriseTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sunsetTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.moonPhase)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipAccumulation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipIntensity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipIntensityError)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipIntensityMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipIntensityMaxTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipProbability)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.temperatureMin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.temperatureMinTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.temperatureMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.temperatureMaxTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apparentTemperatureMin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apparentTemperatureMinTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apparentTemperatureMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apparentTemperatureMaxTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dewPoint)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.windSpeed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.windBearing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cloudCover)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.humidity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pressure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.visibility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ozone)
+        </td>
+    </tr>
+}
+
+</table>

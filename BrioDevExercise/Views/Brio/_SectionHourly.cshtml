@@ -1,0 +1,23 @@
+﻿@model ForecastIO.Hourly
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.summary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.summary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.icon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.icon)
+        </dd>
+
+    </dl>
+</div>
+@Html.Partial("_HourForecast", Model.data)

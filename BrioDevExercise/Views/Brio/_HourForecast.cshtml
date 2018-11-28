@@ -1,0 +1,85 @@
+﻿@model IEnumerable<ForecastIO.HourForecast>
+
+<table class="table">
+    <tr>
+        <th>
+            Time
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.summary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.icon)
+        </th>
+        <th>
+            Precip Intensity
+        </th>
+        <th>
+            Precip Prob (0-1)
+        </th>
+        <th>
+            Precip Type
+        </th>
+        <th>
+            Temp
+        </th>
+        <th>
+            Wind Speed
+        </th>
+        <th>
+            Wind Bearing
+        </th>
+        <th>
+            Cloud Cover
+        </th>
+        <th>
+            Humidity
+        </th>
+  
+        <th>
+            Visibility
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @BrioDevExercise.Helpers.StringManip.miliToDate(item.time,2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.summary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.icon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipIntensity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipProbability)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.temperature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.windSpeed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.windBearing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cloudCover)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.humidity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.visibility)
+        </td>
+    </tr>
+}
+
+</table>

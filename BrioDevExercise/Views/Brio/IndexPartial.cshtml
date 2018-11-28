@@ -1,0 +1,132 @@
+﻿@model ForecastIO.ForecastIOResponse
+
+@{
+    string temperature = "@temperature";
+}
+
+<table style="width: 550px; margin: auto; text-align: left;" class="table-bordered">
+    <tr>
+        <th style="width: 50%;">
+            Timezone
+        </th>
+        <th style="width: 50%;">
+            Offset
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.timezone)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.offset)
+        </td>
+    </tr>
+</table>
+<hr />
+<br />
+<div id="tabs">
+
+    <ul class="nav nav-tabs" id="navlayer2">
+        <li class="active"><a href="#panel21" data-toggle="tab">Current</a></li>
+        <li><a href="#panel12" data-toggle="tab">Tomorrow</a></li>
+        <li><a href="#panel22" data-toggle="tab">Next Hour</a></li>
+        <li><a href="#panel13" data-toggle="tab">Hourly (24 Hours)</a></li>
+        <li><a href="#panel23" data-toggle="tab">24 Hour Graph</a></li>
+        <li><a href="#panel24" data-toggle="tab">This Week</a></li>
+        <li><a href="#panel25" data-toggle="tab">Map</a></li>
+    </ul>
+    <div>
+        <div class="tab-content">
+            <div id="panel21" class="tab-pane fade in active">
+                <script type="text/javascript" src="https://darksky.net/widget/graph-bar/@Model.latitude.ToString(),@Model.longitude.ToString()/us12/en.js?width=undefined&title=Full Forecast&textColor=333333&bgColor=FFFFFF&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=C7C7C7&currentDetailsOption=true"></script>
+            </div>
+            <div id="panel12" class="tab-pane fade in">
+                @if (Model.daily != null && Model.daily.data.Any())
+                {
+                    @Html.Partial("_SectionTomorrow", Model.daily.data.ElementAt(1))
+                }
+                else
+                {
+                    <h1>OOps Something went wrong</h1>
+                }
+            </div>
+            <div id="panel22" class="tab-pane fade in">
+                @if (Model.minutely != null && Model.minutely.data.Any())
+                {
+                    @Html.Partial("_SectionMinutely", Model.minutely)
+                }
+                else
+                {
+                    <h1>OOps Something went wrong</h1>
+                }
+            </div>
+            <div id="panel13" class="tab-pane fade in">
+                @if (Model.hourly != null && Model.hourly.data.Any())
+                {
+                    @Html.Partial("_SectionHourly", Model.hourly)
+                }
+                else
+                {
+                    <h1>OOps Something went wrong</h1>
+                }
+            </div>
+            <div id="panel23" class="tab-pane fade in">
+                <script type="text/javascript" src="https://darksky.net/widget/graph/@Model.latitude.ToString(),@Model.longitude.ToString()/us12/en.js?width=undefined&title=Full Forecast&textColor=333333&bgColor=FFFFFF&fontFamily=Default&customFont=&units=us&graph=temperature_graph&timeColor=333333&tempColor=333333&lineColor=333333&markerColor=333333"></script>
+            </div>
+
+            <div id="panel24" class="tab-pane fade in">
+                <script type='text/javascript' src='https://darksky.net/widget/default/@Model.latitude.ToString(),@Model.longitude.ToString()/us12/en.js?height=350&title=Full Forecast&textColor=333333&bgColor=FFFFFF&skyColor=333&fontFamily=Default&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>
+            </div>
+            <div id="panel25" class="tab-pane fade in">
+                <script src='https://darksky.net/map-embed/@temperature,@Model.latitude.ToString(),@Model.longitude.ToString(),6.js?embed=true&timeControl=true&fieldControl=true&defaultField=temperature&defaultUnits=_f'></script>
+            </div>
+        </div>
+    </div>
+    @section scripts{
+        <script type="text/javascript">
+            $(function () {
+                RedRot();
+            });
+            function RedRot() {
+                $('#navlayer2 li').click(function () {
+                    $(this).siblings('li').removeClass('active');
+                    $(this).addClass('active');
+                })
+
+            };
+        </script>
+    }
+
+
+    @*<br />
+        <hr />
+        <h1>Complete Data Set</h1>
+        <br />
+        @if (Model.minutely != null && Model.minutely.data.Any() && Model.daily.data.Any() && Model.hourly.data.Any())
+        {
+            <div>
+                @Html.Partial("_Currently", Model.currently)
+                <hr />
+            </div>
+            <div>
+                @Html.Partial("_SectionMinutely", Model.minutely)
+                <hr />
+            </div>
+            <div>
+                @Html.Partial("_SectionDaily", Model.daily)
+                <hr />
+            </div>
+            <div>
+                @Html.Partial("_SectionHourly", Model.hourly)
+                <hr />
+            </div>
+        }
+        else
+        {
+            <div>
+                <h1>OOPS Something Went Wrong</h1>
+            </div>
+        }*@
+
+
+</div>

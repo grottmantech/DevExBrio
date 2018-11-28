@@ -1,0 +1,25 @@
+﻿@model ForecastIO.Daily
+
+<div>
+    <h4>Daily</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.summary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.summary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.icon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.icon)
+        </dd>
+
+    </dl>
+</div>
+@Html.Partial("_DailyForecast", Model.data)

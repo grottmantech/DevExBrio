@@ -1,0 +1,123 @@
+﻿@model ForecastIO.Currently
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.summary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.icon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nearestStormDistance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nearestStormBearing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipIntensity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipIntensityError)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipProbability)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.temperature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apparentTemperature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dewPoint)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.windSpeed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.windBearing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cloudCover)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.humidity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pressure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.visibility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ozone)
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @BrioDevExercise.Helpers.StringManip.miliToDate(Model.time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.summary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.icon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.nearestStormDistance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.nearestStormBearing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.precipIntensity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.precipIntensityError)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.precipProbability)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.precipType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.temperature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.apparentTemperature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.dewPoint)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.windSpeed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.windBearing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.cloudCover)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.humidity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.pressure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.visibility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.ozone)
+        </td>
+    </tr>
+
+</table>

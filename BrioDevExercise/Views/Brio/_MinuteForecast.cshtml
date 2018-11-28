@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ForecastIO.MinuteForecast>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipIntensity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipIntensityError)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipProbability)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precipType)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @BrioDevExercise.Helpers.StringManip.miliToDate(item.time, 2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipIntensity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipIntensityError)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipProbability)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precipType)
+        </td>
+    </tr>
+}
+
+</table>
